@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liudong.zhihu">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.write_external_storage" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/zhihu"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--引导页-->
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--首页-->
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name" />
+
+        <!--首页新闻详情-->
+        <activity
+            android:name=".activity.LatestContentActivity"
+            android:theme="@style/AppTheme.TransparentActivity" />
+
+        <!--分类新闻详情-->
+        <activity
+            android:name=".activity.NewsContentActivity"
+            android:theme="@style/AppTheme.TransparentActivity" />
+    </application>
+
+</manifest>
